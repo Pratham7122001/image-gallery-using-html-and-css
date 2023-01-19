@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*box ki size change nahi hoti bhale hi border ya margin change kari ho*/
+}
+
+#wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container {
+    height: 100%;
+    max-width: 12000px;
+    margin: 0 auto;
+    /*center mai rahega*/
+    padding: 50px;
+
+}
+
+h1 {
+    margin: 20px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 24%;
+    position: relative;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    filter: grayscale(100%);
+    object-fit: cover;
+    box-shadow: 0 0 20px #333
+}
+
+.card:hover {
+    transform: scale(1.03);
+    /*upar uthke aayega*/
+    filter: drop-shadow(0 0 10px #333);
+    transition: 0.3s;
+}
+
+.card:hover img {
+    filter: grayscale(0%);
+}
+
+figcaption {
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    /*figcaption ke parent yane card ka %hai yeh and width*/
+    /* height:20%; */
+    /* font-size: 16px; */
+    font-weight:500;
+    color:#ffff;
+    opacity: 0;
+    /*1 matlab dikhega*/
+  
+    border-radius: 0 0 10px 10px;
+    /* background: linear-gradient(0deg, rgba(0, 0, 0) 0%, rgb(255, 255, 255)); */
+}
+
+ .card:hover figcaption{
+    opacity: 0.6;
+    transform:scale (1.03);
+ }  
